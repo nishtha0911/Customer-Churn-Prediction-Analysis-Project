@@ -67,3 +67,5 @@ Output stored as predictions.csv for Power BI use
 
 ## Snapshot of Dashboard (Power BI Service)
 
+![image alt](https://github.com/nishtha0911/Customer-Churn-Prediction-Analysis-Project/blob/main/summary%20page.png?raw=true)
+![image alt](https://github.com/nishtha0911/Customer-Churn-Prediction-Analysis-Project/blob/main/prediction%20page.png?raw=true)
