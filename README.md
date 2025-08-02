@@ -1,28 +1,28 @@
-Introduction
+# Introduction
 Customer churn refers to the percentage of customers who stop using a company's product or service during a specific time period. Understanding churn is critical for telecom providers to improve customer satisfaction and reduce revenue loss. This project presents a complete data pipeline—from raw telecom data to actionable insights and a machine learning model that predicts which customers are most likely to churn.
 
-🎯 Project Objectives
+# Project Objectives
 ETL Pipeline: Design an end-to-end extract, transform, and load (ETL) flow in SQL Server to handle raw telecom customer data.
 Data Cleaning: Handle nulls, convert data types, and prepare structured views for reporting.
 Dashboarding: Create insightful, interactive dashboards in Power BI to track churn by demographics, geography, services, and contract details.
 Prediction Model: Train a Random Forest machine learning model using Python to predict churners based on customer features.
 Business Insight: Provide actionable suggestions by interpreting model predictions and dashboard findings.
 
-🧰 Tools & Technologies
+# Tools & Technologies
 SQL Server: For staging, cleaning, and structuring data
 Power BI: For creating interactive visuals and dashboards
 Python: For building, training, and evaluating the ML model
 Jupyter Notebook: For experimenting with feature engineering and model validation
 Libraries: pandas, numpy, scikit-learn, seaborn, matplotlib, joblib
 
-📁 Project Structure
+#  Project Structure
 SQL/ – Scripts for database schema, staging, and views
 PowerBI/ – .pbix file with visuals and metrics
 Python/ – Jupyter notebook with churn prediction model
 README.md – Documentation and project overview
 requirements.txt – Python dependencies
 
-🧪 Data Cleaning and Preparation (SQL Server)
+#  Data Cleaning and Preparation (SQL Server)
 Staging Table: Load raw CSV data into a staging table.
 Null Handling: Use SQL functions to handle missing values (ISNULL, NULLIF).
 Type Conversion: Ensure correct formats for boolean, categorical, and numerical fields.
@@ -30,7 +30,7 @@ View Creation: Generate two main views:
 vw_ChurnData: Includes labeled data for churn/stay customers
 vw_JoinData: Filters new joiners to apply model predictions
 
-📊 Dashboard Design (Power BI)
+#  Dashboard Design (Power BI)
 The dashboard was created to provide quick visual insight into the factors influencing churn:
 
 1. Summary Page
@@ -47,7 +47,7 @@ Filterable by tenure, state, contract, and payment method
 Helps identify high-risk customer groups
 
 
-🤖 Machine Learning Model (Python – Random Forest)
+#  Machine Learning Model (Python – Random Forest)
 Data Source: Used SQL view vw_ChurnData as input
 
 Preprocessing:
@@ -56,11 +56,14 @@ Removed irrelevant columns
 
 Model: Random Forest Classifier,Trained on 80% of the dataset and Achieved 84% accuracy
 
-Evaluation:
+# Evaluation:
 Confusion Matrix
 Precision, Recall, F1-score
 Feature Importance to interpret results
 
-Prediction Output:
+# Prediction Output:
 Applied model to vw_JoinData
 Output stored as predictions.csv for Power BI use
+
+## Snapshot of Dashboard (Power BI Service)
+
